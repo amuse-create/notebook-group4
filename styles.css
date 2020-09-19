@@ -1,0 +1,57 @@
+
+body {
+    height: 100%;
+    background-image: linear-gradient(#ff6161,#ff768c);
+    background-color: 60%;
+    background-repeat: no-repeat;    
+    font-family: sans-serif;
+    color: #0f222d;
+    background-size: auto;
+      
+
+}
+.input-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+.input-group-append:hover .dropdown-menu{
+    display:block;
+
+}
+
+button{
+    font-size: 1em;
+    color: #53BDFF;
+    background-color: lightgrey;
+    outline: 0;
+    border: none;
+    width: 50px;
+}
+
+.to-do-list{
+        display: none;
+        background-color: black;
+        font-family: sans-serif;
+        color: #ff6161;
+        margin-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 40px;
+       
+}
+
+ul{
+    list-style: none;
+}
+li{
+    
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 1.3em;
+    color: #2f4f4f;
+
+}
+
