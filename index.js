@@ -7,9 +7,8 @@
 const listItems = document.forms[0];
 const itemInput = listItems.children[0];
 let todoItems = []
-let ul = document.querySelector('ul');
-let li = document.querySelector('li');
-
+let ul = document.querySelector('.taskList');
+let li = document.createElement('li');
 
 /*Adrian variables*/
 /*Global variables end here */
@@ -18,23 +17,27 @@ let li = document.querySelector('li');
 
 /*Alejandra works from here */
 
+
 // submit data function
-addItem = (event) => {
+let addItem = (event) => {
     event.preventDefault();
     if (itemInput.value != '') {
         addListItem(itemInput.value);
-        itemInput.value = '';
+itemInput.value = '';
     } 
+    todoItems.push(itemInput);
 }
-//load every event in the page
-listItems.addEventListener('submit', addItem);
 
 // add tasks
-addListItem = (task) => {
-    li.innerHTML = `<input type="checkbox"> <label> item 1 </label>`; ul.appendChild(li);
-    document.querySelector('.to-do-list').style.display = 'block';
+let addListItem = (todoItems) => {
+    li.innerText = `${todoItems}` ; 
+    ul.appendChild(li);
+    document.querySelector('.newTask').style.display = 'block';
+   
 }
 
+//load every event in the page
+listItems.addEventListener('submit', addItem);
 
 
 /*Alejandra work ends here */
@@ -43,5 +46,4 @@ addListItem = (task) => {
 /*Adrian works from here */
 
 
-/*Adrian work ends here*/
-            
+/*Adrian work ends here*/ 
