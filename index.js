@@ -4,10 +4,12 @@
 
 /*Alejandra variables*/
 
-const listItems = document.forms[0];
-const itemInput = listItems.children[0];
+const listItems = document.querySelector(".add-to-do");
+
+//document.forms[0];
+const itemInput = listItems.children[1];
 let todoItems = []
-let ul = document.querySelector('.taskList');
+let ul = document.querySelector('.list');
 let li = document.createElement('li');
 
 /*Adrian variables*/
@@ -33,7 +35,6 @@ let addListItem = (todoItems) => {
     li.innerText = `${todoItems}` ; 
     ul.appendChild(li);
     document.querySelector('.newTask').style.display = 'block';
-   
 }
 
 //load every event in the page
