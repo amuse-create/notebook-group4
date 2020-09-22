@@ -6,10 +6,9 @@
 
 const listItems = document.forms[0];
 const itemInput = listItems.children[2];
-let todoItems = []
-let ul = document.getElementById('list');
-let li = document.createElement('li');
-let tasks = document.getElementsByClassName('tasks');
+const todoItems = []
+const ul = document.getElementById('list');
+const tasks = document.getElementsByClassName('tasks');
 /*Adrian variables*/
 /*Global variables end here */
 /* Goran Works from  here */
@@ -19,7 +18,7 @@ let tasks = document.getElementsByClassName('tasks');
 
 
 // submit data function
-let addItem = (event) => {
+const addItem = (event) => {
 event.preventDefault();
     if (itemInput.value) {
         addListItem(itemInput.value);
@@ -29,10 +28,11 @@ todoItems.push(addItem);
 }
 
 // add tasks
-let addListItem = (tasks) => {
-    return  li.innerText = `${tasks}` ;  
+const addListItem = (tasks) => {
+    const li = document.createElement("li");
+    li.innerText = `${tasks}` ;  
     ul.appendChild(li);
-        document.querySelector('.content').style.display = 'block';
+        document.querySelector('.text-container').style.display = 'block';
     }
     
 
