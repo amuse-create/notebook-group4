@@ -1,9 +1,11 @@
 /*Alejandra variables*/
 const listItems = document.forms[0];
 const itemInput = listItems.children[2];
+
 const todoItems = [];
 const ul = document.getElementById("list");
 const tasks = document.getElementsByClassName("tasks");
+
 /*Adrian variables*/
 /*Global variables end here */
 /* Goran Works from  here */
@@ -13,6 +15,7 @@ const tasks = document.getElementsByClassName("tasks");
 /*Alejandra works from here */
 
 // mark a task as done
+
 
 const markTaskAsDone = (event) => {
   const label = event.currentTarget.parentNode.children[1];
@@ -36,6 +39,7 @@ const addListItem = (tasks) => {
   document.querySelector(".text-container").style.display = "block";
 };
 
+
 // submit data function
 const addItem = (event) => {
   event.preventDefault();
@@ -46,5 +50,8 @@ const addItem = (event) => {
   }
 };
 
+
 //load every event in the page
 listItems.addEventListener("submit", addItem);
+
+
